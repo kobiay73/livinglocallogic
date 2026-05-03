@@ -1,34 +1,60 @@
 <?php include('header.php'); ?>
 
-    <section class="relative h-[90vh] flex items-center justify-center text-center px-4">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#041611]/80 via-[#041611]/40 to-[#041611] z-10"></div>
-        <div class="absolute inset-0 bg-[url('chef-action.jpg')] bg-cover bg-center opacity-40 grayscale-[0.2]"></div>
-        <div class="relative z-20 max-w-5xl">
-            <h2 class="text-[#c5a059] text-xs font-bold tracking-[0.5em] uppercase mb-6">Culinary Craft | South Korea</h2>
-            <h1 class="text-6xl md:text-8xl mb-8 leading-[1.1]">The <span class="italic font-light">Logic</span> of Korean Mastery</h1>
-            <p class="text-lg md:text-xl text-slate-300/80 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-                Not a cooking class. Technical mastery in Korean fermentation, aging, and culinary craft — rooted in local ingredient sourcing and built for the modern professional chef.
+    <section class="relative flex items-center px-6 md:px-16" style="min-height: 85vh;">
+        <div class="absolute inset-0 z-0">
+            <img src="hero-salmon.png" alt="Fresh whole salmon" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#041611]/95 via-[#041611]/80 to-[#041611]/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041611] via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-2xl pt-16 pb-16">
+            <div class="inline-flex items-center gap-2 bg-[#c5a059]/15 border border-[#c5a059]/30 rounded-full px-4 py-2 mb-8">
+                <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-pulse"></span>
+                <span class="text-[#c5a059] text-xs font-bold tracking-widest uppercase">2026 Cohort — Limited to 6 Seats</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl mb-6 leading-[1.1]">
+                Learn Korean<br><span class="italic font-light text-[#c5a059]">Culinary Craft</span><br>in South Korea<br><span class="text-3xl md:text-4xl font-light text-slate-300">— and earn your Certificate</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 font-light mb-4 leading-relaxed">
+                A hands-on 3-day immersion into Korean fermentation, aging, and cooking — guided personally by Chef Lee Tak in Yangsan, South Korea.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#apply" class="btn-gold px-12 py-5 rounded-full text-lg font-bold uppercase tracking-widest text-sm">Request Placement</a>
-                <a href="#tracks" class="glass px-12 py-5 rounded-full text-lg font-bold hover:bg-white/5 transition uppercase tracking-widest text-sm">View Syllabus</a>
+            <p class="text-slate-400 text-base font-light mb-10">
+                No experience required. Just curiosity and a love for real food.
+            </p>
+            <div class="flex flex-wrap gap-6 mb-10 text-sm text-slate-300">
+                <div class="flex items-center gap-2"><span class="text-[#c5a059]">✓</span> Small group (max 6)</div>
+                <div class="flex items-center gap-2"><span class="text-[#c5a059]">✓</span> Hands-on every day</div>
+                <div class="flex items-center gap-2"><span class="text-[#c5a059]">✓</span> Taught by Chef Lee Tak</div>
+                <div class="flex items-center gap-2"><span class="text-[#c5a059]">✓</span> Certificate included</div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#apply" class="btn-gold px-10 py-4 rounded-full text-base font-bold text-center">Reserve My Spot →</a>
+                <a href="#tracks" class="glass px-10 py-4 rounded-full text-base font-bold text-center hover:bg-white/5 transition">See What You'll Learn</a>
             </div>
         </div>
     </section>
 
-    <section id="logic" class="py-32 px-8 max-w-7xl mx-auto">
+    <section id="logic" class="pt-0 pb-12 px-8 max-w-7xl mx-auto">
+        <div class="flex items-center gap-6 mb-12">
+            <div class="h-16 w-24 rounded-lg overflow-hidden flex-shrink-0">
+                <img src="salmon-cutting.png" alt="Salmon craft" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-1">The Craft</p>
+                <h2 class="text-2xl md:text-3xl font-bold">What You'll Master</h2>
+            </div>
+        </div>
         <div class="grid lg:grid-cols-3 gap-16">
             <div class="group">
                 <div class="h-px w-full bg-white/10 mb-8 group-hover:bg-[#c5a059] transition-colors duration-500"></div>
                 <h3 class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-4">01. Breakdown & Craft</h3>
                 <h4 class="text-2xl font-bold mb-6">From whole to nothing wasted.</h4>
-                <p class="text-slate-400 font-light leading-relaxed">Master the art of breaking down whole salmon and chicken — understanding muscle structure, aging potential, and zero-waste utilization. Including Korean-style skewering and charcoal grilling technique.</p>
+                <p class="text-slate-400 font-light leading-relaxed">Master the art of breaking down whole salmon and chicken — understanding muscle structure, aging potential, and zero-waste utilization from the first cut to the final dish. Including Korean-style skewering and charcoal grilling technique.</p>
             </div>
             <div class="group">
                 <div class="h-px w-full bg-white/10 mb-8 group-hover:bg-[#c5a059] transition-colors duration-500"></div>
                 <h3 class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-4">02. Fermentation & Aging</h3>
                 <h4 class="text-2xl font-bold mb-6">Time is the ingredient.</h4>
-                <p class="text-slate-400 font-light leading-relaxed">Learn the science behind Korean fermentation — salmon aging through salt-curing (Shiojime), kelp-pressing (Kombujime), and Scandinavian dry-cure (Gravlax). Master Ganjang-based preservation and Saeujang.</p>
+                <p class="text-slate-400 font-light leading-relaxed">Learn the science behind Korean fermentation — salmon aging through salt-curing (Shiojime), kelp-pressing (Kombujime), and Scandinavian dry-cure (Gravlax), each reinterpreted through a Korean lens. Master Ganjang-based preservation and the craft of Yeoneojang and Saeujang.</p>
             </div>
             <div class="group">
                 <div class="h-px w-full bg-white/10 mb-8 group-hover:bg-[#c5a059] transition-colors duration-500"></div>
@@ -49,56 +75,56 @@
                 </div>
             </div>
             <div class="space-y-8">
-                <h2 class="text-5xl leading-tight font-bold">From military kitchen to culinary craft.</h2>
+                <h2 class="text-5xl leading-tight">From military kitchen to culinary craft.</h2>
                 <p class="text-slate-400 font-light text-xl leading-relaxed">Two years cooking for the Korean military. Then professional kitchens in Seoul. Then three restaurants of his own. His focus: salmon, chicken, and the fermentation logic he grew up watching his mother practice.</p>
-                <div class="space-y-4 text-sm text-slate-300">
-                    <p><span class="text-[#c5a059] font-bold mr-2">01.</span> <span class="font-bold">The Military Foundation:</span> Discipline, consistency, no waste.</p>
-                    <p><span class="text-[#c5a059] font-bold mr-2">02.</span> <span class="font-bold">The Restaurant Years:</span> Salmon, chicken, fermentation across three self-run kitchens.</p>
-                    <p><span class="text-[#c5a059] font-bold mr-2">03.</span> <span class="font-bold">The Local Legacy:</span> Seasonal vegetables, kimchi, and banchan the traditional way.</p>
+                <div class="space-y-6 text-sm text-slate-300">
+                    <p><span class="text-[#c5a059] font-bold uppercase tracking-tighter mr-2">01.</span> <span class="font-bold">The Military Foundation:</span> Discipline, consistency, no waste.</p>
+                    <p><span class="text-[#c5a059] font-bold uppercase tracking-tighter mr-2">02.</span> <span class="font-bold">The Restaurant Years:</span> Salmon, chicken, fermentation — across three self-run kitchens.</p>
+                    <p><span class="text-[#c5a059] font-bold uppercase tracking-tighter mr-2">03.</span> <span class="font-bold">The Local Legacy:</span> His mother's kitchen. Seasonal vegetables, kimchi, banchan the traditional way.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tracks" class="py-32 px-8 max-w-7xl mx-auto">
+    <section id="tracks" class="py-24 px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-widest">Official Syllabus</h2>
-            <div class="h-1 w-24 bg-[#c5a059] mx-auto"></div>
+            <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-widest">Certification Tracks</h2>
+            <p class="text-slate-400 font-light">Complete any track and receive your <span class="text-[#c5a059] font-semibold">Certificate of Korean Culinary Mastery</span></p>
+            <div class="h-1 w-24 bg-[#c5a059] mx-auto mt-6"></div>
         </div>
-        
-        <div class="grid lg:grid-cols-2 gap-16">
-            <div class="space-y-8">
-                <div class="glass p-8 rounded-xl border-l-4 border-[#c5a059]">
-                    <h3 class="text-2xl font-bold mb-2">Korean Culinary Intensive</h3>
-                    <p class="text-[#c5a059] text-sm font-bold tracking-widest uppercase mb-4 text-sm">3 Days | Breakdown · Aging · Zero-Waste</p>
-                    <div class="space-y-6 text-sm text-slate-300">
-                        <p><strong>Day 1: Salmon Breakdown & Curing.</strong> Understanding anatomy, filleting (J-cut), and 3-way aging: Shiojime, Kombujime, and Korean Gravlax. Utilizing head/collar for zero-waste application.</p>
-                        <p><strong>Day 2: Poultry Breakdown & Brining.</strong> Precision deboning for skewers and brewing Ganjang (soy) brine (Dalim-jang) for seafood preservation.</p>
-                        <p><strong>Day 3: Preservation & Narrative.</strong> Chemical principles of preservation, Premium Salmon Gimbap craft, and final review with Chef Lee Tak.</p>
-                    </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="glass p-12 rounded-xl text-center">
+                <h4 class="text-2xl font-bold mb-2">Korean Culinary Intensive</h4>
+                <p class="text-[#c5a059] text-sm font-bold tracking-widest mb-6 uppercase">3 DAYS</p>
+                <p class="text-slate-400 text-sm font-light mb-6 italic">Breakdown · Aging · Zero-Waste Mastery</p>
+                <div class="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 rounded-full px-4 py-2 mb-8">
+                    <span class="text-[#c5a059] text-xs">🎓</span>
+                    <span class="text-[#c5a059] text-xs font-bold tracking-wider uppercase">Certificate of Korean Culinary Mastery</span>
                 </div>
+                <br>
+                <a href="#apply" class="text-xs uppercase tracking-widest font-bold border-b border-[#c5a059] pb-1 hover:text-white transition">Reserve My Spot →</a>
             </div>
-
-            <div class="space-y-8">
-                <div class="glass p-8 rounded-xl border-l-4 border-[#c5a059]">
-                    <h3 class="text-2xl font-bold mb-2">Korean Vegan Table</h3>
-                    <p class="text-[#c5a059] text-sm font-bold tracking-widest uppercase mb-4 text-sm">3 Days | Roots · Season · Tradition</p>
-                    <div class="space-y-6 text-sm text-slate-300">
-                        <p><strong>Day 1: Kimchi Foundations.</strong> Fermentation science, dry/brine salting methods, and crafting plant-based umami from kelp and mushrooms.</p>
-                        <p><strong>Day 2: Namul Mastery.</strong> Thermal control for vegetables, washing/stuffing salted cabbage, and traditional seasoning for seasonal greens.</p>
-                        <p><strong>Day 3: The Table as a System.</strong> Application of Ganjang/Doenjang in braised and stir-fried dishes. Final composition of a full vegan integrated table.</p>
-                    </div>
+            <div class="glass p-12 rounded-xl text-center">
+                <h4 class="text-2xl font-bold mb-2">Korean Vegan Table</h4>
+                <p class="text-[#c5a059] text-sm font-bold tracking-widest mb-6 uppercase">3 DAYS</p>
+                <p class="text-slate-400 text-sm font-light mb-6 italic">Roots · Season · Tradition</p>
+                <div class="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 rounded-full px-4 py-2 mb-8">
+                    <span class="text-[#c5a059] text-xs">🎓</span>
+                    <span class="text-[#c5a059] text-xs font-bold tracking-wider uppercase">Certificate of Korean Culinary Mastery</span>
                 </div>
+                <br>
+                <a href="#apply" class="text-xs uppercase tracking-widest font-bold border-b border-[#c5a059] pb-1 hover:text-white transition">Reserve My Spot →</a>
             </div>
         </div>
     </section>
 
-    <section id="apply" class="py-32 px-8 max-w-4xl mx-auto">
+    <section id="apply" class="py-24 px-8 max-w-4xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold uppercase mb-4">Request Placement</h2>
-            <p class="text-slate-400 font-light">Join the 2026 cohort. Limited to 6 participants per workshop.</p>
+            <p class="text-slate-400 font-light mb-2">Cohort Size: Max 6 participants for personalized technical feedback.</p>
+            <p class="text-[#c5a059] text-sm font-semibold">🎓 All participants receive a Certificate of Korean Culinary Mastery upon completion.</p>
         </div>
-        <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST" class="space-y-8 glass p-12 rounded-lg">
+        <form action="https://formspree.io/f/xnjwjgzz" method="POST" class="space-y-8 glass p-12 rounded-lg">
             <div class="grid md:grid-cols-2 gap-8">
                 <input type="text" name="name" class="input-field" placeholder="Full Name" required>
                 <input type="text" name="establishment" class="input-field" placeholder="Establishment" required>
