@@ -1,0 +1,63 @@
+:root {
+    --forest: #041611;
+    --gold: #c5a059;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+body { 
+    margin: 0;
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--forest); 
+    color: #f8fafc; 
+}
+
+h1, .chef-name { font-family: 'Playfair Display', serif; }
+h2, h3, h4, nav { font-family: 'Inter', sans-serif; font-weight: 700; }
+
+.max-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(4, 22, 17, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lizard-logo { height: 45px; width: auto; }
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(4, 22, 17, 0.7), rgba(4, 22, 17, 0.7)), url('chef-action.jpg') center/cover;
+}
+
+.hero h1 { font-size: 4.5rem; margin-bottom: 1rem; }
+
+.syllabus-card {
+    background: var(--glass);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.gold-text { color: var(--gold); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+
+.btn-gold {
+    background: var(--gold);
+    color: #041611;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+}
