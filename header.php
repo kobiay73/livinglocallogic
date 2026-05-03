@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living Local Logic | The Logic of Korean Mastery</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,12 +21,10 @@
 </head>
 <body class="antialiased">
     <nav class="sticky top-0 z-50 glass flex justify-between items-center px-8 py-4 border-b border-white/5">
-        
-        <div class="flex items-center gap-3">
-            <img src="logo-clear-2026.png" alt="Living Local Logic Mascot" class="h-10 w-auto">
-            <div class="text-xl font-bold tracking-tighter uppercase"><a href="index.php">Living <span class="text-[#c5a059]">Local</span> Logic</a></div>
-        </div>
-
+        <a href="index.php" class="flex items-center gap-3">
+            <img src="logo-clear-2026.png" alt="Living Local Logic" class="h-10 w-auto">
+            <span class="text-xl font-bold tracking-tighter uppercase">Living <span class="text-[#c5a059]">Local</span> Logic</span>
+        </a>
         <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
             <a href="#logic" class="hover:text-[#c5a059] transition">The Logic</a>
             <a href="#chef" class="hover:text-[#c5a059] transition">Chef Lee Tak</a>
