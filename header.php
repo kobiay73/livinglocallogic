@@ -30,6 +30,7 @@
             <a href="index.php#chef" class="hover:text-[#c5a059] transition">Chef Lee Tak</a>
             <a href="index.php#tracks" class="hover:text-[#c5a059] transition">Syllabus</a>
             <a href="partners.php" class="hover:text-[#c5a059] transition">Partners</a>
+            <a href="who-we-are.php" class="hover:text-[#c5a059] transition">Who We Are</a>
             <a href="index.php#apply" class="text-[#c5a059] border border-[#c5a059]/40 px-5 py-1.5 rounded-sm hover:bg-[#c5a059] hover:text-black transition uppercase">Apply Now</a>
         </div>
     </nav>
