@@ -86,6 +86,31 @@
         </div>
     </section>
 
+    <!-- YouTube Shorts Section -->
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <p class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-4">See It For Yourself</p>
+            <h2 class="text-4xl font-bold mb-4">A Taste of What's Waiting</h2>
+            <p class="text-slate-400 font-light">A glimpse into the food, the people, and the experience.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-2xl overflow-hidden aspect-[9/16] relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/0LBL0F5_OgU" title="Living Local Logic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-[9/16] relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/8zmyz2A_6sQ" title="Living Local Logic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-[9/16] relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/I4vekTo4stg" title="Living Local Logic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="https://www.youtube.com/@livinglocallogic" target="_blank" rel="noopener" class="glass px-8 py-3 rounded-full text-sm font-bold hover:border-[#c5a059]/50 hover:text-[#c5a059] transition">
+                See All Videos on YouTube →
+            </a>
+        </div>
+    </section>
+
     <section id="tracks" class="py-24 px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-widest">Syllabus</h2>
