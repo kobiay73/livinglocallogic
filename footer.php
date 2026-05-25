@@ -17,7 +17,27 @@
                 <span class="text-sm font-medium tracking-wide">youtube.com/@livinglocallogic</span>
             </a>
 
-            <div class="text-[10px] text-slate-600 uppercase tracking-widest">
+            <!-- Address -->
+            <div class="flex items-start justify-center gap-3 text-slate-400 max-w-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c5a059] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div class="text-sm leading-relaxed text-left">
+                    <p class="text-white font-medium mb-1">경상남도 양산시 물금읍 동중6길 30</p>
+                    <p>30, Dongjung 6-gil, Mulgeum-eup,<br>Yangsan-si, Gyeongsangnam-do,<br>Republic of Korea 50597, F2</p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <a href="tel:+821028096254" class="flex items-center gap-3 text-slate-400 hover:text-[#c5a059] transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c5a059] group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z" />
+                </svg>
+                <span class="text-sm font-medium tracking-wide">+82 010-2809-6254</span>
+            </a>
+
+            <div class="text-[10px] text-slate-600 uppercase tracking-widest mt-2">
                 &copy; 2026 Living Local Logic | Yangsan, South Korea
             </div>
         </div>
