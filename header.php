@@ -26,9 +26,10 @@
             <span class="text-xl font-bold tracking-tighter uppercase">Living <span class="text-[#c5a059]">Local</span> Logic</span>
         </a>
         <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-            <a href="#logic" class="hover:text-[#c5a059] transition">The Logic</a>
-            <a href="#chef" class="hover:text-[#c5a059] transition">Chef Lee Tak</a>
-            <a href="#tracks" class="hover:text-[#c5a059] transition">Syllabus</a>
-            <a href="#apply" class="text-[#c5a059] border border-[#c5a059]/40 px-5 py-1.5 rounded-sm hover:bg-[#c5a059] hover:text-black transition uppercase">Request Placement</a>
+            <a href="index.php#logic" class="hover:text-[#c5a059] transition">The Logic</a>
+            <a href="index.php#chef" class="hover:text-[#c5a059] transition">Chef Lee Tak</a>
+            <a href="index.php#tracks" class="hover:text-[#c5a059] transition">Syllabus</a>
+            <a href="partners.php" class="hover:text-[#c5a059] transition">Partners</a>
+            <a href="index.php#apply" class="text-[#c5a059] border border-[#c5a059]/40 px-5 py-1.5 rounded-sm hover:bg-[#c5a059] hover:text-black transition uppercase">Apply Now</a>
         </div>
     </nav>
