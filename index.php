@@ -2,7 +2,7 @@
 
     <section class="relative flex items-center px-6 md:px-16" style="min-height: 85vh;">
         <div class="absolute inset-0 z-0">
-            <img src="hero-salmon.png" alt="Fresh whole salmon" class="w-full h-full object-cover object-center">
+            <img src="hero-feast.jpg" alt="Korean feast table" class="w-full h-full object-cover object-center">
             <div class="absolute inset-0 bg-gradient-to-r from-[#041611]/95 via-[#041611]/80 to-[#041611]/30"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#041611] via-transparent to-transparent"></div>
         </div>
