@@ -36,7 +36,7 @@
     <section id="logic" class="pt-0 pb-12 px-8 max-w-7xl mx-auto">
         <div class="flex items-center gap-6 mb-12">
             <div class="h-16 w-24 rounded-lg overflow-hidden flex-shrink-0">
-                <img src="salmon-cutting.png" alt="Salmon craft" class="w-full h-full object-cover">
+                <img src="royal-feast-small.jpg" alt="Korean royal feast" class="w-full h-full object-cover">
             </div>
             <div>
                 <p class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-1">The Logic</p>
