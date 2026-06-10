@@ -60,7 +60,7 @@
                 <div class="h-px w-full bg-white/10 mb-8 group-hover:bg-[#c5a059] transition-colors duration-500"></div>
                 <h3 class="text-[#c5a059] text-xs font-bold tracking-widest uppercase mb-4">03. The Feast</h3>
                 <h4 class="text-2xl font-bold mb-6">Cook it. Set it. Eat it together.</h4>
-                <p class="text-slate-400 font-light leading-relaxed">On the final day, you cook. Teams split up, the dishes take shape based on what you sourced the day before, and we set the table together, the Korean way. Then everyone sits down and eats what they built together. You leave with an LLL certificate and an English recipe booklet. The meal stays with you longer.</p>
+                <p class="text-slate-400 font-light leading-relaxed">On the final day, you cook. Teams split up, the dishes take shape based on what you sourced the day before, and we set the table together, the Korean way. Then everyone sits down and eats what they accomplished together. You leave with an LLL certificate and an English recipe booklet. The meal stays with you longer.</p>
             </div>
         </div>
     </section>
