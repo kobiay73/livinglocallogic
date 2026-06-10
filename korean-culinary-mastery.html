@@ -114,27 +114,32 @@ body {
 }
 
 .hero-sub {
-  font-size: clamp(18px, 3vw, 26px);
-  color: var(--cream-dim);
-  font-weight: 400;
+  font-size: clamp(20px, 4vw, 28px);
+  color: var(--white);
+  font-weight: 600;
   margin-bottom: 20px;
-  line-height: 1.55;
+  line-height: 1.45;
   max-width: 520px;
 }
 
 .hero-cert {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  gap: 12px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--gold);
-  border: 1px solid var(--gold-line);
-  padding: 14px 28px;
+  outline: 1px solid var(--gold-line);
+  outline-offset: 5px;
+  border: 1px solid var(--gold);
+  padding: 18px 32px;
   margin-bottom: 24px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
-.hero-cert svg { width: 22px; height: 22px; stroke: var(--gold); flex-shrink: 0; }
+.hero-cert svg { width: 26px; height: 26px; stroke: var(--gold); flex-shrink: 0; }
 
 .btn-primary {
   display: inline-block;
