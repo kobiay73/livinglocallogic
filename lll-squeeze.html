@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Culinary Mastery — Living Local Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green:      #041611;
+  --green-2:    #071f17;
+  --green-3:    #0a2d22;
+  --gold:       #c5a059;
+  --gold-light: #d4b47a;
+  --gold-dim:   rgba(197,160,89,0.18);
+  --gold-line:  rgba(197,160,89,0.28);
+  --cream:      #f5f0e8;
+  --cream-dim:  rgba(245,240,232,0.65);
+  --cream-faint:rgba(245,240,232,0.38);
+  --white:      #ffffff;
+  --red:        #c0392b;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--green);
+  color: var(--cream);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── UTILITY ─── */
+.gold     { color: var(--gold); }
+.italic   { font-style: italic; }
+.center   { text-align: center; }
+.serif    { font-family: 'Playfair Display', serif; }
+
+/* ─── TOP BAR ─── */
+.topbar {
+  background: var(--gold);
+  color: var(--green);
+  text-align: center;
+  padding: 11px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(4,22,17,0.72) 0%,
+      rgba(4,22,17,0.68) 50%,
+      rgba(4,22,17,0.88) 100%),
+    url('https://livinglocallogic.com/hero-salmon.png') center 35% / cover no-repeat;
+}
+
+.hero-body {
+  position: relative;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4.5rem, 18vw, 8rem);
+  font-weight: 700;
+  line-height: 0.88;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.hero-sub {
+  font-size: 14px;
+  color: var(--cream-dim);
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.55;
+  max-width: 420px;
+}
+
+.hero-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  border: 1px solid var(--gold-line);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.hero-cert svg { width: 16px; height: 16px; stroke: var(--gold); flex-shrink: 0; }
+
+.btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 52px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+.hero-rule {
+  width: 1px;
+  height: 28px;
+  background: var(--gold-line);
+  margin: 20px auto 0;
+}
+
+/* ─── SECTION WRAPPER ─── */
+.section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-sm {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background: var(--gold-line);
+  border: none;
+  margin: 0;
+}
+
+/* ─── SECTION LABEL ─── */
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+/* ─── HEADINGS ─── */
+h2.serif {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* ─── INTRO TEXT ─── */
+.lead {
+  font-size: 18px;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+p.body {
+  font-size: 16px;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ─── WHO THIS IS FOR ─── */
+.for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gold-line);
+  border: 1px solid var(--gold-line);
+  margin-top: 36px;
+}
+
+@media (max-width: 540px) { .for-grid { grid-template-columns: 1fr; } }
+
+.for-item {
+  background: var(--green-2);
+  padding: 24px 26px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: background .2s;
+}
+.for-item:hover { background: var(--green-3); }
+
+.for-check {
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+.for-check svg { width: 12px; height: 12px; stroke: var(--gold); fill: none; }
+
+.for-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.for-text span { font-size: 13px; color: var(--cream-faint); }
+
+/* ─── WHAT YOU'LL LEARN ─── */
+.module {
+  border-top: 1px solid var(--gold-line);
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.module:last-child { border-bottom: 1px solid var(--gold-line); }
+
+.module-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-dim);
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.module h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.module-sub {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cream-faint);
+  margin-bottom: 10px;
+}
+.module p { font-size: 15px; color: var(--cream-dim); line-height: 1.75; }
+
+/* ─── CHEF ─── */
+.chef-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .chef-section { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.chef-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(15%);
+}
+
+.chef-right {}
+
+.chef-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.chef-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+
+.chef-bio {
+  font-size: 15px;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.chef-creds { list-style: none; }
+.chef-creds li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cream);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(197,160,89,0.1);
+  line-height: 1.4;
+}
+.chef-creds li:first-child { border-top: 1px solid rgba(197,160,89,0.1); }
+
+.chef-check {
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.chef-check svg { width: 10px; height: 10px; stroke: var(--gold); fill: none; }
+
+/* ─── WHAT'S INCLUDED ─── */
+.included-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--gold-line);
+  margin-top: 32px;
+}
+
+@media (max-width: 540px) { .included-list { grid-template-columns: 1fr; } }
+
+.included-list li {
+  padding: 18px 22px;
+  font-size: 14px;
+  color: var(--cream-dim);
+  border-bottom: 1px solid var(--gold-line);
+  border-right: 1px solid var(--gold-line);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.included-list li:nth-child(even) { border-right: none; }
+.included-list li:nth-last-child(-n+2) { border-bottom: none; }
+
+.inc-dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── CERT BLOCK ─── */
+.cert-block {
+  border: 1px solid var(--gold-line);
+  padding: 40px;
+  text-align: center;
+  background: var(--green-2);
+  position: relative;
+}
+
+.cert-block::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold-dim);
+  pointer-events: none;
+}
+
+.cert-icon {
+  width: 56px; height: 56px;
+  border: 1px solid var(--gold-line);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.cert-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; }
+
+.cert-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.cert-block p { font-size: 15px; color: var(--cream-dim); max-width: 440px; margin: 0 auto; line-height: 1.75; }
+
+/* ─── PRICING ─── */
+.price-block {
+  text-align: center;
+  padding: 60px 24px;
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  background: var(--green-2);
+}
+
+.price-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 12px;
+}
+
+.price-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.price-per {
+  font-size: 14px;
+  color: var(--cream-faint);
+  margin-bottom: 28px;
+}
+
+.price-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.price-item {
+  font-size: 14px;
+  color: var(--cream-dim);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price-item svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; flex-shrink: 0; }
+
+.seats-alert {
+  display: inline-block;
+  background: rgba(192,57,43,0.15);
+  border: 1px solid rgba(192,57,43,0.4);
+  color: #e07070;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 10px 24px;
+  margin-bottom: 32px;
+}
+
+/* ─── FORM ─── */
+.form-section {
+  background: var(--green);
+  padding: 72px 24px 100px;
+}
+
+.form-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.form-inner .label { text-align: center; }
+.form-inner h2.serif { text-align: center; }
+
+.form-box {
+  background: var(--green-2);
+  border: 1px solid var(--gold-line);
+  padding: 40px 36px;
+  margin-top: 40px;
+}
+
+@media (max-width: 480px) { .form-box { padding: 28px 20px; } }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: var(--green);
+  border: 1px solid var(--gold-line);
+  padding: 13px 16px;
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s;
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--gold); }
+.field input::placeholder,
+.field textarea::placeholder { color: rgba(245,240,232,0.25); }
+.field select option { background: var(--green); }
+.field textarea { resize: vertical; min-height: 80px; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+
+.form-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 18px 32px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  margin-top: 8px;
+  border-radius: 0;
+}
+.form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.form-fine {
+  font-size: 12px;
+  color: var(--cream-faint);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.65;
+}
+
+/* ─── SUCCESS ─── */
+.success-msg {
+  display: none;
+  text-align: center;
+  padding: 48px 20px;
+}
+.success-msg svg { width: 52px; height: 52px; stroke: var(--gold); fill: none; margin-bottom: 18px; }
+.success-msg h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.success-msg p { font-size: 15px; color: var(--cream-dim); }
+
+/* ─── PLATFORMS ─── */
+.platforms {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid var(--gold-line);
+}
+.platforms-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 18px;
+}
+.platform-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pill {
+  border: 1px solid var(--gold-line);
+  padding: 7px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 36px 24px;
+  text-align: center;
+  border-top: 1px solid var(--gold-line);
+}
+footer p { font-size: 13px; color: var(--cream-faint); line-height: 1.9; }
+footer a { color: var(--cream-faint); text-decoration: none; }
+
+/* ─── STICKY MOBILE CTA ─── */
+.sticky {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--gold);
+  color: var(--green);
+  text-align: center;
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 100;
+}
+@media (max-width: 640px) { .sticky { display: block; } }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.on { opacity: 1; transform: none; }
+
+/* ─── PROGRESS ─── */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--gold);
+  z-index: 999;
+  width: 0;
+  transition: width .1s linear;
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">🇰🇷 July 2026 — 6 Seats Only — Reservations Now Open</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-body">
+    <div class="hero-wordmark">Living Local Logic &nbsp;·&nbsp; Busan Yangsan, Korea</div>
+    <h1>Korean<br>Culinary<br><em>Mastery</em></h1>
+    <p class="hero-sub">3 days. 6 seats. One chef.<br>Busan Yangsan, South Korea — July 2026.</p>
+    <div class="hero-cert">
+      <svg viewBox="0 0 24 24" stroke-width="1.5" fill="none"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      Certificate of Korean Culinary Mastery — included
+    </div>
+    <a href="#apply" class="btn-primary">Reserve Your Seat</a>
+    <div class="hero-rule"></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ═══ CHEF ═══ -->
+<div class="chef-section reveal">
+  <img class="chef-photo" src="https://livinglocallogic.com/chef-portrait.jpg" alt="Chef Lee Tak">
+  <div class="chef-right">
+    <div class="chef-label">Meet The Chef</div>
+    <div class="chef-name">Chef<br>Lee Tak</div>
+    <p class="chef-bio">His foundation was built in the Korean military — discipline, consistency, zero waste at scale. Then professional kitchens in Seoul. Then three self-run restaurants. What he teaches is what no school covers: the logic behind the food.</p>
+    <ul class="chef-creds">
+      <li><div class="chef-check"><svg viewBox="0 0 10 10" stroke-width="2"><polyline points="1 5 4 8 9 2"/></svg></div>2 years cooking for the Korean military</li>
+      <li><div class="chef-check"><svg viewBox="0 0 10 10" stroke-width="2"><polyline points="1 5 4 8 9 2"/></svg></div>Professional kitchens in Seoul</li>
+      <li><div class="chef-check"><svg viewBox="0 0 10 10" stroke-width="2"><polyline points="1 5 4 8 9 2"/></svg></div>3 self-run restaurants — salmon, chicken, fermentation</li>
+      <li><div class="chef-check"><svg viewBox="0 0 10 10" stroke-width="2"><polyline points="1 5 4 8 9 2"/></svg></div>Korea Tourism Organization certified</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ WHO THIS IS FOR ═══ -->
+<div class="section reveal">
+  <div class="label">This Program Is For</div>
+  <h2 class="serif">If any of these describe you,<br>you belong here.</h2>
+
+  <div class="for-grid">
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Professional Chef or Cook</strong>
+        <span>Looking to add authentic Korean technique to your repertoire</span>
+      </div>
+    </div>
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Restaurant Owner</strong>
+        <span>Who wants to understand fermentation and aging from the source</span>
+      </div>
+    </div>
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Serious Food Professional</strong>
+        <span>Culinary educator, food writer, or product developer</span>
+      </div>
+    </div>
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Advanced Home Cook</strong>
+        <span>Who has outgrown classes and wants real depth</span>
+      </div>
+    </div>
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Culinary Traveler</strong>
+        <span>Who travels specifically to learn — not just to eat</span>
+      </div>
+    </div>
+    <div class="for-item">
+      <div class="for-check"><svg viewBox="0 0 12 12" stroke-width="2"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></div>
+      <div class="for-text">
+        <strong>Fermentation Specialist</strong>
+        <span>Looking for a Korean perspective on preservation and aging</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ THE PROGRAM ═══ -->
+<div class="section reveal">
+  <div class="label">The Three-Day Program</div>
+  <h2 class="serif">What you will learn — and practice — every day.</h2>
+  <p class="lead">No lectures. No PowerPoints. Every technique is performed by your hands, on real ingredients, corrected in real time by Chef Lee Tak.</p>
+
+  <div class="module">
+    <div class="module-num">01</div>
+    <div>
+      <div class="module-sub">Day One</div>
+      <h3>Breakdown & Craft</h3>
+      <p>Master the breakdown of whole salmon and chicken — muscle structure, aging potential, zero-waste utilization from the first cut to the final dish. Korean-style skewering, charcoal grilling, and the discipline of nothing wasted.</p>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-num">02</div>
+    <div>
+      <div class="module-sub">Day Two</div>
+      <h3>Fermentation & Aging</h3>
+      <p>Salt-curing (Shiojime), kelp-pressing (Kombujime), and Scandinavian Gravlax reinterpreted through a Korean lens. Ganjang-based preservation. The craft of Yeoneojang and Saeujang. Time as an ingredient — not a shortcut.</p>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-num">03</div>
+    <div>
+      <div class="module-sub">Day Three</div>
+      <h3>The Korean Table</h3>
+      <p>Seasonal namul, traditional kimchi, and banchan through a plant-based lens. The foundation of Korean culinary logic — fermentation as daily practice. Taught the way Chef Lee Tak's mother taught him.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ WHAT'S INCLUDED ═══ -->
+<div class="section reveal">
+  <div class="label">Everything Included</div>
+  <h2 class="serif">One price. No hidden costs.</h2>
+
+  <ul class="included-list">
+    <li><div class="inc-dot"></div> 3 full days of hands-on instruction</li>
+    <li><div class="inc-dot"></div> All ingredients and materials</li>
+    <li><div class="inc-dot"></div> Certificate of Korean Culinary Mastery</li>
+    <li><div class="inc-dot"></div> Maximum 6 participants</li>
+    <li><div class="inc-dot"></div> Personal feedback from Chef Lee Tak</li>
+    <li><div class="inc-dot"></div> Recipes and reference notes</li>
+    <li><div class="inc-dot"></div> Yangsan, South Korea setting</li>
+    <li><div class="inc-dot"></div> KTO verified program</li>
+  </ul>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ CERT ═══ -->
+<div class="section-sm reveal">
+  <div class="cert-block">
+    <div class="cert-icon">
+      <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+    </div>
+    <h3>Certificate of Korean Culinary Mastery</h3>
+    <p>Issued to every participant who completes the program. A meaningful professional credential — not a participation trophy.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ PRICING ═══ -->
+<div class="price-block reveal">
+  <div class="price-eyebrow">Investment</div>
+  <div class="price-num">$389</div>
+  <div class="price-per">per person · all-inclusive · July 2026</div>
+
+  <div class="price-items">
+    <div class="price-item">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      3 days of professional instruction
+    </div>
+    <div class="price-item">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      All ingredients included
+    </div>
+    <div class="price-item">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Certificate of Korean Culinary Mastery
+    </div>
+    <div class="price-item">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Max 6 participants — personal attention guaranteed
+    </div>
+  </div>
+
+  <div class="seats-alert">⚠ Only 6 seats available for the July 2026 program</div>
+  <br>
+  <a href="#apply" class="btn-primary">Apply for a Seat Now →</a>
+  <p class="hero-sub-note" style="margin-top:14px">No payment required to apply</p>
+</div>
+
+<!-- ═══ FORM ═══ -->
+<section class="form-section" id="apply">
+  <div class="form-inner">
+    <div class="label center">Limited to 6 Seats</div>
+    <h2 class="serif center">Reserve Your Seat</h2>
+
+    <div class="form-box">
+      <div id="formWrap">
+        <div class="field-row">
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" id="fname" placeholder="Maria" required>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" id="lname" placeholder="Rossi" required>
+          </div>
+        </div>
+        <div class="field">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label>Your Role / Background</label>
+          <select id="role">
+            <option value="">— Select —</option>
+            <option>Professional Chef / Cook</option>
+            <option>Restaurant Owner / Manager</option>
+            <option>Culinary Educator</option>
+            <option>Food Writer / Journalist</option>
+            <option>Fermentation Specialist</option>
+            <option>Advanced Home Cook</option>
+            <option>Other Food Professional</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Country</label>
+          <input type="text" id="country" placeholder="e.g. Italy, USA, Australia">
+        </div>
+        <div class="field">
+          <label>Preferred Track</label>
+          <select id="track">
+            <option value="">— Select —</option>
+            <option>Korean Culinary Intensive (Salmon, Fermentation, Craft)</option>
+            <option>Korean Vegan Table (Namul, Kimchi, Banchan)</option>
+            <option>Undecided — tell me more</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Anything we should know? (optional)</label>
+          <textarea id="note" placeholder="Dietary needs, professional context, questions…"></textarea>
+        </div>
+        <button type="button" class="form-submit" onclick="submitForm()">Submit Application →</button>
+        <p class="form-fine">No payment now. We review every application personally and respond within 48 hours.</p>
+      </div>
+
+      <div class="success-msg" id="successMsg">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3>Application Received</h3>
+        <p>We'll be in touch within 48 hours to discuss your placement for the July 2026 program.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLATFORMS ═══ -->
+<div class="platforms">
+  <div class="platforms-label">Listed & Verified On</div>
+  <div class="platform-row">
+    <div class="pill">Klook</div>
+    <div class="pill">Viator</div>
+    <div class="pill">GetYourGuide</div>
+    <div class="pill">Booking.com</div>
+    <div class="pill">Korea Tourism Organization</div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>
+    <strong style="font-family:'Playfair Display',serif; color:var(--gold); font-size:15px;">Living Local Logic</strong><br>
+    Yangsan, South Korea &nbsp;·&nbsp; <a href="mailto:logic@livinglocallogic.com">logic@livinglocallogic.com</a><br>
+    © 2026 Living Local Logic. All rights reserved.
+  </p>
+</footer>
+
+<!-- Sticky CTA mobile -->
+<a href="#apply" class="sticky">Apply Now — $389 / person →</a>
+
+<script>
+window.addEventListener('scroll', () => {
+  const p = document.getElementById('prog');
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  p.style.width = (window.scrollY / h * 100) + '%';
+});
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function submitForm() {
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  if (!fname || !email) { alert('Please enter your name and email to apply.'); return; }
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Submitting…';
+  btn.disabled = true;
+  // TODO: replace setTimeout with fetch() to your PHP endpoint
+  setTimeout(() => {
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }, 700);
+}
+</script>
+</body>
+</html>
