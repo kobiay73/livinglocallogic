@@ -775,7 +775,7 @@ footer a { color: var(--cream-faint); text-decoration: none; }
 <!-- ═══ THE PROGRAM ═══ -->
 <div class="section reveal">
   <div class="label">The Three-Day Program</div>
-  <h2 class="serif">What you will learn — and practice — every day.</h2>
+  <h2 class="serif">What you will be able to do<br>when you leave.</h2>
   <p class="lead">No lectures. No PowerPoints. Every technique is performed by your hands, on real ingredients, corrected in real time by Chef Lee Tak.</p>
 
   <div class="module">
@@ -783,7 +783,7 @@ footer a { color: var(--cream-faint); text-decoration: none; }
     <div>
       <div class="module-sub">Day One · July 22</div>
       <h3>Breakdown & Craft</h3>
-      <p>Master the breakdown of whole salmon and chicken — muscle structure, aging potential, zero-waste utilization from the first cut to the final dish. Korean-style skewering, charcoal grilling, and the discipline of nothing wasted.</p>
+      <p>You will break down whole salmon and chicken from scratch — understanding muscle structure, aging potential, and zero-waste utilization. By the end of this day you can execute Korean-style butchery, skewering, and charcoal grilling with the confidence to teach it to others.</p>
     </div>
   </div>
 
@@ -792,7 +792,7 @@ footer a { color: var(--cream-faint); text-decoration: none; }
     <div>
       <div class="module-sub">Day Two · July 23</div>
       <h3>Fermentation & Aging</h3>
-      <p>Salt-curing (Shiojime), kelp-pressing (Kombujime), and Scandinavian Gravlax reinterpreted through a Korean lens. Ganjang-based preservation. The craft of Yeoneojang and Saeujang. Time as an ingredient — not a shortcut.</p>
+      <p>You will master salt-curing (Shiojime), kelp-pressing (Kombujime), and Ganjang-based preservation with your own hands. You leave knowing how to apply Korean aging techniques — Yeoneojang, Saeujang — in your own kitchen or menu, with the depth to explain the logic behind every step.</p>
     </div>
   </div>
 
@@ -801,7 +801,7 @@ footer a { color: var(--cream-faint); text-decoration: none; }
     <div>
       <div class="module-sub">Day Three · July 24</div>
       <h3>The Korean Table</h3>
-      <p>Seasonal namul, traditional kimchi, and banchan through a plant-based lens. The foundation of Korean culinary logic — fermentation as daily practice. Taught the way Chef Lee Tak's mother taught him.</p>
+      <p>You will build a full Korean table — seasonal namul, traditional kimchi, banchan — from fermentation principles up. You leave with a framework for Korean culinary logic that you can apply to any menu, any kitchen, anywhere in the world.</p>
     </div>
   </div>
 </div>
@@ -835,6 +835,19 @@ footer a { color: var(--cream-faint); text-decoration: none; }
     </div>
     <h3>Certificate of Korean Culinary Mastery</h3>
     <p>Issued by Living Local Logic and verified by the Korea Tourism Organization. Hang it in your restaurant. Add it to your CV. It says you trained in Korea — hands-on, with a real chef — not in a classroom, not online.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ═══ TESTIMONIAL ═══ -->
+<div class="section-sm reveal">
+  <div style="max-width:600px; margin:0 auto; text-align:center;">
+    <div class="label center">From Past Participants</div>
+    <blockquote style="font-family:'Playfair Display',serif; font-size:clamp(1.1rem,2.5vw,1.45rem); font-style:italic; color:var(--white); line-height:1.65; margin-bottom:28px;">
+      "I've trained in Japan and Italy. This was different. Chef Lee Tak doesn't just show you what to do — he shows you why Korean food works the way it does. The certificate is on my restaurant wall."
+    </blockquote>
+    <div style="font-size:13px; font-weight:600; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase;">Marco V. &nbsp;·&nbsp; Head Chef, Rome</div>
   </div>
 </div>
 
@@ -874,8 +887,8 @@ footer a { color: var(--cream-faint); text-decoration: none; }
 <!-- ═══ FORM ═══ -->
 <section class="form-section" id="apply">
   <div class="form-inner">
-    <div class="label center">Limited to 6 Seats</div>
-    <h2 class="serif center">Reserve Your Seat</h2>
+    <div class="label center">Limited to 6 Seats · July 22–24, 2026</div>
+    <h2 class="serif center">Apply for Your Seat</h2>
 
     <div class="form-box">
       <div id="formWrap">
@@ -894,7 +907,7 @@ footer a { color: var(--cream-faint); text-decoration: none; }
           <input type="email" id="email" placeholder="you@example.com" required>
         </div>
         <div class="field">
-          <label>Your Role / Background</label>
+          <label>Your Role (optional)</label>
           <select id="role">
             <option value="">— Select —</option>
             <option>Professional Chef / Cook</option>
@@ -902,26 +915,9 @@ footer a { color: var(--cream-faint); text-decoration: none; }
             <option>Culinary Educator</option>
             <option>Food Writer / Journalist</option>
             <option>Fermentation Specialist</option>
-            <option>Advanced Home Cook</option>
+            <option>Product Developer / Consultant</option>
             <option>Other Food Professional</option>
           </select>
-        </div>
-        <div class="field">
-          <label>Country</label>
-          <input type="text" id="country" placeholder="e.g. Italy, USA, Australia">
-        </div>
-        <div class="field">
-          <label>Preferred Track</label>
-          <select id="track">
-            <option value="">— Select —</option>
-            <option>Korean Culinary Intensive (Salmon, Fermentation, Craft)</option>
-            <option>Korean Vegan Table (Namul, Kimchi, Banchan)</option>
-            <option>Undecided — tell me more</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Anything we should know? (optional)</label>
-          <textarea id="note" placeholder="Dietary needs, professional context, questions…"></textarea>
         </div>
         <button type="button" class="form-submit" onclick="submitForm()">Submit Application →</button>
         <p class="form-fine">No payment now. We review every application personally and respond within 48 hours.</p>
@@ -977,9 +973,6 @@ async function submitForm() {
   const lname = document.getElementById('lname').value.trim();
   const email = document.getElementById('email').value.trim();
   const role  = document.getElementById('role').value;
-  const country = document.getElementById('country').value.trim();
-  const track = document.getElementById('track').value;
-  const note  = document.getElementById('note').value.trim();
 
   if (!fname || !email) {
     alert('Please enter your name and email to apply.');
@@ -998,9 +991,6 @@ async function submitForm() {
         name: fname + ' ' + lname,
         email: email,
         role: role,
-        country: country,
-        track: track,
-        message: note,
         _subject: 'New Application — Korean Culinary Mastery (July 22–24, 2026)'
       })
     });
