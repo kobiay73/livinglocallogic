@@ -990,8 +990,7 @@ async function submitForm() {
     });
 
     if (res.ok) {
-      document.getElementById('formWrap').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
+      window.location.href = '/thank-you.html';
     } else {
       btn.textContent = 'Submit Application →';
       btn.disabled = false;
